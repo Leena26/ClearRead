@@ -1,29 +1,3 @@
-<<<<<<< Updated upstream
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-=======
 /* ════════════════════════════════════════════════
    TOKENS
    ════════════════════════════════════════════════ */
@@ -60,7 +34,7 @@ html, body { height: 100%; }
 body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 
 /* ════════════════════════════════════════════════
-   APP SHELL — fills viewport, no overflow
+   APP SHELL
    ════════════════════════════════════════════════ */
 .app {
   height: 100vh;
@@ -84,7 +58,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   gap: 1.5rem;
 }
 
-/* Logo */
 .logo {
   font-size: 1.35rem;
   letter-spacing: -0.05em;
@@ -96,7 +69,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 .logo__light { font-weight: 200; opacity: 0.75; }
 .logo__bold  { font-weight: 800; }
 
-/* Controls row */
 .controls {
   display: flex;
   align-items: center;
@@ -111,7 +83,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   white-space: nowrap;
 }
 
-/* ── Animated level slider ── */
 .level-slider {
   position: relative;
   display: flex;
@@ -121,7 +92,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   overflow: hidden;
 }
 
-/* Sliding white pill — moves behind the labels */
 .level-slider__thumb {
   position: absolute;
   top: 3px;
@@ -160,7 +130,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   color: rgba(255,255,255,0.88);
 }
 
-/* ── Run button ── */
 .btn-run {
   height: 32px;
   min-width: 86px;
@@ -178,25 +147,10 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   display: flex;
   align-items: center;
   justify-content: center;
->>>>>>> Stashed changes
 }
 .btn-run:hover:not(:disabled) { background: #5EEAD4; }
 .btn-run:disabled { opacity: 0.3; cursor: not-allowed; }
 
-<<<<<<< Updated upstream
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-=======
-/* ── Loading spinner ── */
 .spinner {
   display: block;
   width: 14px;
@@ -209,7 +163,7 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
 /* ════════════════════════════════════════════════
-   WORKSPACE — the two editor panes
+   WORKSPACE
    ════════════════════════════════════════════════ */
 .workspace {
   flex: 1;
@@ -218,7 +172,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   min-height: 0;
 }
 
-/* ── Pane ── */
 .pane {
   flex: 1;
   display: flex;
@@ -229,14 +182,12 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 .pane--in  { background: var(--white); }
 .pane--out { background: var(--teal-50); }
 
-/* Hairline between panes */
 .divider {
   width: 1px;
   flex-shrink: 0;
   background: var(--line);
 }
 
-/* ── Pane bar (label row) ── */
 .pane__bar {
   flex-shrink: 0;
   height: 42px;
@@ -256,7 +207,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 .pane__stat {
   font-size: 0.7rem;
   color: var(--ink-4);
-  font-variant-numeric: tabular-nums;
 }
 .pane__chip {
   font-size: 0.68rem;
@@ -269,7 +219,6 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   text-transform: uppercase;
 }
 
-/* ── Text areas ── */
 .pane__text {
   flex: 1;
   width: 100%;
@@ -287,19 +236,14 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   resize: none;
   display: block;
 }
-.pane__text--input::placeholder {
-  color: var(--ink-4);
-  font-style: italic;
-}
 .pane__text--output {
-  /* Serif for the "finished document" feel */
   font-family: var(--serif);
   font-size: 1rem;
   overflow-y: auto;
 }
 
 /* ════════════════════════════════════════════════
-   GHOST / EMPTY STATE
+   GHOST STATE
    ════════════════════════════════════════════════ */
 .ghost {
   flex: 1;
@@ -327,12 +271,8 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 .ghost__msg {
   font-size: 0.8rem;
   color: var(--ink-4);
-  letter-spacing: 0.01em;
 }
 
-/* ════════════════════════════════════════════════
-   ERROR
-   ════════════════════════════════════════════════ */
 .error {
   margin: 1rem 1.75rem 0;
   font-size: 0.83rem;
@@ -370,7 +310,7 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
 .footer__mark span:last-child  { color: var(--teal-600); font-weight: 800; }
 
 /* ════════════════════════════════════════════════
-   RESPONSIVE — stack vertically on mobile
+   RESPONSIVE
    ════════════════════════════════════════════════ */
 @media (max-width: 600px) {
   .app { height: auto; min-height: 100vh; overflow: visible; }
@@ -394,5 +334,4 @@ body { font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   .pane__text--input { min-height: 180px; resize: vertical; }
   .ghost { min-height: 140px; padding-bottom: 2rem; }
   .footer { height: auto; padding: 0.75rem 1.25rem; }
->>>>>>> Stashed changes
 }
