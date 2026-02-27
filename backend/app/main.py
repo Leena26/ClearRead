@@ -48,7 +48,7 @@ async def transform(req : TransformRequest):
             {"role": "user", "content": req.text}
         ],
     )
-    
+    ai_answer = completion.choices[0].message.content
     return {
-        "transformed_text": f"[LEVEL {req.reading_level}] {req.text[:50]}..."
+        "transformed_text": f"[LEVEL {req.reading_level}] {ai_answer}"
     }
