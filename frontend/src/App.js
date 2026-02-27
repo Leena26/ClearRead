@@ -19,10 +19,14 @@ function App() {
   const activeIndex = LEVELS.findIndex((l) => l.value === readingLevel);
 
   const handleSubmit = async () => {
+    // Returns if input is empty/only whitspace
     if (!text.trim()) return;
+
+    // Start loading spinner, clear error messages and prev results
     setLoading(true);
     setError("");
     setResult("");
+
     try {
       const res  = await fetch("http://127.0.0.1:8000/transform", {
         method:  "POST",
